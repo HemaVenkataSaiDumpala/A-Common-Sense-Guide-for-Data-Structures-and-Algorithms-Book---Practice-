@@ -1,0 +1,82 @@
+1st Question Answer: 
+
+
+thisdict = {}
+
+array1=[1,2,3,4,5]
+array2=[0,2,4,6,8]
+
+common_array=[]
+
+for i in array1: 
+	thisdict[i]=True
+
+for j in array2: 
+  if j in thisdict: 
+    common_array.append(j)
+        
+		
+
+
+Time Complexity : 
+
+First Loop : O(N) : 1st Array
+Second Loop : O(N) : 2nd Array 
+
+O(N)+O(N) : O(2N) : We need to ignore the constant 2. Hence, O(N)
+
+
+2nd Question Answer: 
+thisdict = {}
+
+Array1=["a", "b", "c", "d", "c", "e", "f"]
+
+
+for i in Array1: 
+  if i not in thisdict: 
+    	thisdict[i]=True
+  else: 
+    	print(i) #return i
+        
+
+#Time Complexity : O(N) : Hashmap search is O(1): Hence, O(1)+O(N) : O(1N) : We ignore constants. Hence, Time complexity is O(N).
+
+3rd Question: 
+thisdict={}
+
+for num in range(97, 123):
+  thisdict[chr(num)]=0
+  
+String="the quick brown box jumps over a lazy dog"
+
+for ltr in String: 
+  if ltr!=' ':
+    thisdict[ltr]=1
+	
+for num in range(97,123):
+  if thisdict[chr(num)]==0: 
+  	print(chr(num))
+
+
+
+#print(thisdict)
+
+	
+
+
+4th Question Answer: 
+
+string="minimum"
+
+thisdict={}
+
+for i in string: 
+  if i in thisdict:
+    	thisdict[i]+=1
+  else: 
+    	thisdict[i]=1
+   
+
+for i in string: 
+  if thisdict[i]==1: 
+    print(i)
