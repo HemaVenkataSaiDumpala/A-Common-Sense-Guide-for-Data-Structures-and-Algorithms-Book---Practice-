@@ -74,9 +74,11 @@ for i in string:
   if i in thisdict:
     	thisdict[i]+=1
   else: 
-    	thisdict[i]=1
+    	thisdict[i]=1    #Time Complexity : O(N)
    
 
 for i in string: 
   if thisdict[i]==1: 
-    print(i)
+    print(i)    # O(1)
+
+Time Complexity : O(N)
