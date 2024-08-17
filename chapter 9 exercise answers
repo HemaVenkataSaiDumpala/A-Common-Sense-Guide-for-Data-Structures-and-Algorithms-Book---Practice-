@@ -1,0 +1,17 @@
+1. Queue
+2. 4
+3. 3
+4. 
+string="abcdef"
+array=[]
+rev_string=""
+for letter in string:
+	#print(letter)
+	array.append(letter) # Time Complexity : O(N)
+while len(array)>0:
+	letter=array.pop()   #O(N)
+	rev_string+=letter
+  
+print(rev_string) 
+
+#Overall Time Complexity = O(N) + O(N) = O(2N) = O(N) 
