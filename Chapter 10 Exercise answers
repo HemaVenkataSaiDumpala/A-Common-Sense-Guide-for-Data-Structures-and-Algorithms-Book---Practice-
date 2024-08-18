@@ -1,0 +1,72 @@
+1. base case : 12>10 : When Lower values exceeds higher value here that is : 10.
+2. Infinite recursions. 10*8*6*4*2*0 ..... Infinite because base case is getting skipped. Hence base case never satisfied and goes until the RAM Memory or Call Stack Memory is full. 
+3. Base Case : High == Low or High == 1 in this case. 
+4. Code : 
+Question : 
+Here is an array containing both numbers as well as other arrays, which in turn contain numbers and arrays:
+
+​ 	array = [  1,
+​ 	           2,
+​ 	           3,
+​ 	           [4, 5, 6],
+​ 	           7,
+​ 	           [8,
+​ 	             [9, 10, 11,
+​ 	               [12, 13, 14]
+​ 	             ]
+​ 	           ],
+​ 	           [15, 16, 17, 18, 19,
+​ 	             [20, 21, 22,
+​ 	               [23, 24, 25,
+​ 	                 [26, 27, 29]
+​ 	               ], 30, 31
+​ 	             ], 32
+​ 	           ], 33
+​ 	        ]
+Write a recursive function that prints all the numbers (and just numbers).
+
+Recursion Code: 
+
+
+array = [
+    1,
+    2,
+    3,
+    [4, 5, 6],
+    7,
+    [
+        8,
+        [
+            9, 10, 11,
+            [
+                12, 13, 14
+            ]
+        ]
+    ],
+    [
+        15, 16, 17, 18, 19,
+        [
+            20, 21, 22,
+            [
+                23, 24, 25,
+                [
+                    26, 27, 29
+                ]
+            ], 30, 31
+        ], 32
+    ], 33
+]
+
+def printer(array):
+    for i in array:
+        if isinstance(i,list):
+        	printer(i)
+        else: 
+        	print(i)
+
+printer(array)
+
+Time Compelxity : O(N) : Because it iterates thorugh all the values at once. 
+#print(len(array))
+
+ 
